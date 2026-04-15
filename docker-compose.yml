@@ -11,4 +11,4 @@ services:
         provider:
             type: model
             options:
-                model: ${LLM_MODEL:-smollm2:latest}
+                model: ${LLM_MODEL:-ai/gemma3:latest}
