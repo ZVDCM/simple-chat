@@ -1,0 +1,14 @@
+services:
+    api:
+        build: ./backend
+        env_file: backend/.env
+        ports:
+            - "3000:3000"
+        depends_on:
+            - llm
+
+    llm:
+        provider:
+            type: model
+            options:
+                model: ${LLM_MODEL:-smollm2:latest}

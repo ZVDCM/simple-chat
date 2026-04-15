@@ -4,17 +4,20 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "npx tsx src/index.ts"
+        "start": "npx tsx --no-warnings --env-file=.env src/index.ts",
+        "build": "tsc",
+        "type-check": "tsc --noEmit"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "type": "commonjs",
+    "type": "module",
     "devDependencies": {
         "@types/express": "^5.0.6",
         "tsx": "^4.21.0"
     },
     "dependencies": {
-        "express": "^5.2.1"
+        "express": "^5.2.1",
+        "typescript": "^6.0.2"
     }
 }
